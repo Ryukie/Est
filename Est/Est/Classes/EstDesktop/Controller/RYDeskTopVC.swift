@@ -13,6 +13,5 @@ class RYDeskTopVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = col_lightGray
-        title = "Est"
     }
 }

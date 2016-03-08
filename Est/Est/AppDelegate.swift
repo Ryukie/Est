@@ -19,7 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = mainTabVC
         window?.makeKeyAndVisible()
+        setGloableNaviColor()
         return true
+    }
+    private func setGloableNaviColor () {
+        UINavigationBar.appearance().tintColor = col_darkGray
+        UITabBar.appearance().tintColor = col_red
     }
 
     func applicationWillResignActive(application: UIApplication) {

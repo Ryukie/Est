@@ -21,6 +21,8 @@
 		4A77AB161C8EB68300ED76EF /* RYDeskTopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB151C8EB68300ED76EF /* RYDeskTopVC.swift */; };
 		4A77AB181C8EC63100ED76EF /* RYOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB171C8EC63100ED76EF /* RYOptionCell.swift */; };
 		4A77AB1A1C8EC69500ED76EF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB191C8EC69500ED76EF /* UIColor+Extension.swift */; };
+		4A77AB1D1C8EF71400ED76EF /* OptionMainView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A77AB1C1C8EF71400ED76EF /* OptionMainView.plist */; };
+		4A77AB201C8EF91300ED76EF /* RYOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB1F1C8EF91300ED76EF /* RYOptionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		4A77AB151C8EB68300ED76EF /* RYDeskTopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYDeskTopVC.swift; sourceTree = "<group>"; };
 		4A77AB171C8EC63100ED76EF /* RYOptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYOptionCell.swift; sourceTree = "<group>"; };
 		4A77AB191C8EC69500ED76EF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4A77AB1C1C8EF71400ED76EF /* OptionMainView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OptionMainView.plist; sourceTree = "<group>"; };
+		4A77AB1F1C8EF91300ED76EF /* RYOptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYOptionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				4A77AAD31C8EB16300ED76EF /* AppDelegate.swift */,
+				4A77AB1B1C8EF6D700ED76EF /* Other */,
 				4A77AAFF1C8EB3D500ED76EF /* Classes */,
 				4A77AADA1C8EB16300ED76EF /* Assets.xcassets */,
 				4A77AADC1C8EB16300ED76EF /* LaunchScreen.storyboard */,
@@ -199,6 +204,7 @@
 		4A77AB061C8EB3D500ED76EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A77AB1F1C8EF91300ED76EF /* RYOptionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,7 +220,7 @@
 		4A77AB081C8EB3EF00ED76EF /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				4A77AB191C8EC69500ED76EF /* UIColor+Extension.swift */,
+				4A77AB211C8F20A800ED76EF /* Extension */,
 				4A77AB091C8EB42400ED76EF /* Global.swift */,
 			);
 			path = Tools;
@@ -251,6 +257,23 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4A77AB1B1C8EF6D700ED76EF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB1C1C8EF71400ED76EF /* OptionMainView.plist */,
+			);
+			name = Other;
+			path = Classes/Other;
+			sourceTree = "<group>";
+		};
+		4A77AB211C8F20A800ED76EF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB191C8EC69500ED76EF /* UIColor+Extension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A77AB1D1C8EF71400ED76EF /* OptionMainView.plist in Resources */,
 				4A77AADE1C8EB16300ED76EF /* LaunchScreen.storyboard in Resources */,
 				4A77AADB1C8EB16300ED76EF /* Assets.xcassets in Resources */,
 			);
@@ -363,6 +387,7 @@
 				4A77AB101C8EB5A500ED76EF /* RYMainNaviVC.swift in Sources */,
 				4A77AB181C8EC63100ED76EF /* RYOptionCell.swift in Sources */,
 				4A77AAD41C8EB16300ED76EF /* AppDelegate.swift in Sources */,
+				4A77AB201C8EF91300ED76EF /* RYOptionModel.swift in Sources */,
 				4A77AB0A1C8EB42400ED76EF /* Global.swift in Sources */,
 				4A77AB1A1C8EC69500ED76EF /* UIColor+Extension.swift in Sources */,
 			);

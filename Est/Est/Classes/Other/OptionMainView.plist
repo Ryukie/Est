@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>header</key>
+		<string>Option</string>
+		<key>Options</key>
+		<array>
+			<dict>
+				<key>targetVC</key>
+				<string>huaBan</string>
+				<key>title</key>
+				<string>icon画板(敬请期待)</string>
+			</dict>
+			<dict>
+				<key>targetVC</key>
+				<string>相册选择</string>
+				<key>title</key>
+				<string>从相册选择图片</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>header</key>
+		<string>关于</string>
+		<key>Options</key>
+		<array>
+			<dict>
+				<key>targetVC</key>
+				<string></string>
+				<key>title</key>
+				<string>关于Est</string>
+			</dict>
+			<dict>
+				<key>targetVC</key>
+				<string></string>
+				<key>title</key>
+				<string>联系吐槽我</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
