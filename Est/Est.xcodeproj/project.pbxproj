@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4A77AAD41C8EB16300ED76EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AAD31C8EB16300ED76EF /* AppDelegate.swift */; };
+		4A77AADB1C8EB16300ED76EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A77AADA1C8EB16300ED76EF /* Assets.xcassets */; };
+		4A77AADE1C8EB16300ED76EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A77AADC1C8EB16300ED76EF /* LaunchScreen.storyboard */; };
+		4A77AAF01C8EB1FE00ED76EF /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A77AAEF1C8EB1FE00ED76EF /* NotificationCenter.framework */; };
+		4A77AAF31C8EB1FE00ED76EF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AAF21C8EB1FE00ED76EF /* TodayViewController.swift */; };
+		4A77AAF61C8EB1FE00ED76EF /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A77AAF41C8EB1FE00ED76EF /* MainInterface.storyboard */; };
+		4A77AAFA1C8EB1FE00ED76EF /* EstQuickAppExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4A77AAED1C8EB1FE00ED76EF /* EstQuickAppExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4A77AB0A1C8EB42400ED76EF /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB091C8EB42400ED76EF /* Global.swift */; };
+		4A77AB101C8EB5A500ED76EF /* RYMainNaviVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB0F1C8EB5A500ED76EF /* RYMainNaviVC.swift */; };
+		4A77AB121C8EB5F800ED76EF /* RYTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB111C8EB5F800ED76EF /* RYTabVC.swift */; };
+		4A77AB141C8EB66E00ED76EF /* RYOptionTBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB131C8EB66E00ED76EF /* RYOptionTBVC.swift */; };
+		4A77AB161C8EB68300ED76EF /* RYDeskTopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB151C8EB68300ED76EF /* RYDeskTopVC.swift */; };
+		4A77AB181C8EC63100ED76EF /* RYOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB171C8EC63100ED76EF /* RYOptionCell.swift */; };
+		4A77AB1A1C8EC69500ED76EF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB191C8EC69500ED76EF /* UIColor+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A77AAF81C8EB1FE00ED76EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A77AAC81C8EB16300ED76EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A77AAEC1C8EB1FE00ED76EF;
+			remoteInfo = EstQuickAppExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4A77AAFE1C8EB1FE00ED76EF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4A77AAFA1C8EB1FE00ED76EF /* EstQuickAppExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4A77AAD01C8EB16300ED76EF /* Est.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Est.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A77AAD31C8EB16300ED76EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A77AADA1C8EB16300ED76EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A77AADD1C8EB16300ED76EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A77AADF1C8EB16300ED76EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A77AAED1C8EB1FE00ED76EF /* EstQuickAppExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EstQuickAppExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A77AAEF1C8EB1FE00ED76EF /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		4A77AAF21C8EB1FE00ED76EF /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		4A77AAF51C8EB1FE00ED76EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4A77AAF71C8EB1FE00ED76EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A77AB091C8EB42400ED76EF /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		4A77AB0F1C8EB5A500ED76EF /* RYMainNaviVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYMainNaviVC.swift; sourceTree = "<group>"; };
+		4A77AB111C8EB5F800ED76EF /* RYTabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYTabVC.swift; sourceTree = "<group>"; };
+		4A77AB131C8EB66E00ED76EF /* RYOptionTBVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYOptionTBVC.swift; sourceTree = "<group>"; };
+		4A77AB151C8EB68300ED76EF /* RYDeskTopVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYDeskTopVC.swift; sourceTree = "<group>"; };
+		4A77AB171C8EC63100ED76EF /* RYOptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYOptionCell.swift; sourceTree = "<group>"; };
+		4A77AB191C8EC69500ED76EF /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A77AACD1C8EB16300ED76EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A77AAEA1C8EB1FE00ED76EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A77AAF01C8EB1FE00ED76EF /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A77AAC71C8EB16300ED76EF = {
+			isa = PBXGroup;
+			children = (
+				4A77AAD21C8EB16300ED76EF /* Est */,
+				4A77AAF11C8EB1FE00ED76EF /* EstQuickAppExtension */,
+				4A77AAEE1C8EB1FE00ED76EF /* Frameworks */,
+				4A77AAD11C8EB16300ED76EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A77AAD11C8EB16300ED76EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AAD01C8EB16300ED76EF /* Est.app */,
+				4A77AAED1C8EB1FE00ED76EF /* EstQuickAppExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A77AAD21C8EB16300ED76EF /* Est */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AAD31C8EB16300ED76EF /* AppDelegate.swift */,
+				4A77AAFF1C8EB3D500ED76EF /* Classes */,
+				4A77AADA1C8EB16300ED76EF /* Assets.xcassets */,
+				4A77AADC1C8EB16300ED76EF /* LaunchScreen.storyboard */,
+				4A77AADF1C8EB16300ED76EF /* Info.plist */,
+			);
+			path = Est;
+			sourceTree = "<group>";
+		};
+		4A77AAEE1C8EB1FE00ED76EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AAEF1C8EB1FE00ED76EF /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A77AAF11C8EB1FE00ED76EF /* EstQuickAppExtension */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AAF21C8EB1FE00ED76EF /* TodayViewController.swift */,
+				4A77AAF41C8EB1FE00ED76EF /* MainInterface.storyboard */,
+				4A77AAF71C8EB1FE00ED76EF /* Info.plist */,
+			);
+			path = EstQuickAppExtension;
+			sourceTree = "<group>";
+		};
+		4A77AAFF1C8EB3D500ED76EF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB081C8EB3EF00ED76EF /* Tools */,
+				4A77AB0B1C8EB4C500ED76EF /* Main */,
+				4A77AB001C8EB3D500ED76EF /* EstDesktop */,
+				4A77AB041C8EB3D500ED76EF /* Option */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4A77AB001C8EB3D500ED76EF /* EstDesktop */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB011C8EB3D500ED76EF /* Controller */,
+				4A77AB021C8EB3D500ED76EF /* Model */,
+				4A77AB031C8EB3D500ED76EF /* View */,
+			);
+			path = EstDesktop;
+			sourceTree = "<group>";
+		};
+		4A77AB011C8EB3D500ED76EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB151C8EB68300ED76EF /* RYDeskTopVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A77AB021C8EB3D500ED76EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A77AB031C8EB3D500ED76EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A77AB041C8EB3D500ED76EF /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB051C8EB3D500ED76EF /* Controller */,
+				4A77AB061C8EB3D500ED76EF /* Model */,
+				4A77AB071C8EB3D500ED76EF /* View */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
+		4A77AB051C8EB3D500ED76EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB131C8EB66E00ED76EF /* RYOptionTBVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A77AB061C8EB3D500ED76EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A77AB071C8EB3D500ED76EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB171C8EC63100ED76EF /* RYOptionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A77AB081C8EB3EF00ED76EF /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB191C8EC69500ED76EF /* UIColor+Extension.swift */,
+				4A77AB091C8EB42400ED76EF /* Global.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		4A77AB0B1C8EB4C500ED76EF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB0C1C8EB4C500ED76EF /* Controller */,
+				4A77AB0D1C8EB4C500ED76EF /* Model */,
+				4A77AB0E1C8EB4C500ED76EF /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4A77AB0C1C8EB4C500ED76EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4A77AB0F1C8EB5A500ED76EF /* RYMainNaviVC.swift */,
+				4A77AB111C8EB5F800ED76EF /* RYTabVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A77AB0D1C8EB4C500ED76EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A77AB0E1C8EB4C500ED76EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A77AACF1C8EB16300ED76EF /* Est */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A77AAE21C8EB16300ED76EF /* Build configuration list for PBXNativeTarget "Est" */;
+			buildPhases = (
+				4A77AACC1C8EB16300ED76EF /* Sources */,
+				4A77AACD1C8EB16300ED76EF /* Frameworks */,
+				4A77AACE1C8EB16300ED76EF /* Resources */,
+				4A77AAFE1C8EB1FE00ED76EF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A77AAF91C8EB1FE00ED76EF /* PBXTargetDependency */,
+			);
+			name = Est;
+			productName = Est;
+			productReference = 4A77AAD01C8EB16300ED76EF /* Est.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A77AAEC1C8EB1FE00ED76EF /* EstQuickAppExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A77AAFB1C8EB1FE00ED76EF /* Build configuration list for PBXNativeTarget "EstQuickAppExtension" */;
+			buildPhases = (
+				4A77AAE91C8EB1FE00ED76EF /* Sources */,
+				4A77AAEA1C8EB1FE00ED76EF /* Frameworks */,
+				4A77AAEB1C8EB1FE00ED76EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EstQuickAppExtension;
+			productName = EstQuickAppExtension;
+			productReference = 4A77AAED1C8EB1FE00ED76EF /* EstQuickAppExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A77AAC81C8EB16300ED76EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RY;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Ryukie;
+				TargetAttributes = {
+					4A77AACF1C8EB16300ED76EF = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9YMD84BE3Z;
+					};
+					4A77AAEC1C8EB1FE00ED76EF = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9YMD84BE3Z;
+					};
+				};
+			};
+			buildConfigurationList = 4A77AACB1C8EB16300ED76EF /* Build configuration list for PBXProject "Est" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A77AAC71C8EB16300ED76EF;
+			productRefGroup = 4A77AAD11C8EB16300ED76EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A77AACF1C8EB16300ED76EF /* Est */,
+				4A77AAEC1C8EB1FE00ED76EF /* EstQuickAppExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A77AACE1C8EB16300ED76EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A77AADE1C8EB16300ED76EF /* LaunchScreen.storyboard in Resources */,
+				4A77AADB1C8EB16300ED76EF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A77AAEB1C8EB1FE00ED76EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A77AAF61C8EB1FE00ED76EF /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A77AACC1C8EB16300ED76EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A77AB141C8EB66E00ED76EF /* RYOptionTBVC.swift in Sources */,
+				4A77AB121C8EB5F800ED76EF /* RYTabVC.swift in Sources */,
+				4A77AB161C8EB68300ED76EF /* RYDeskTopVC.swift in Sources */,
+				4A77AB101C8EB5A500ED76EF /* RYMainNaviVC.swift in Sources */,
+				4A77AB181C8EC63100ED76EF /* RYOptionCell.swift in Sources */,
+				4A77AAD41C8EB16300ED76EF /* AppDelegate.swift in Sources */,
+				4A77AB0A1C8EB42400ED76EF /* Global.swift in Sources */,
+				4A77AB1A1C8EC69500ED76EF /* UIColor+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A77AAE91C8EB1FE00ED76EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A77AAF31C8EB1FE00ED76EF /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A77AAF91C8EB1FE00ED76EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A77AAEC1C8EB1FE00ED76EF /* EstQuickAppExtension */;
+			targetProxy = 4A77AAF81C8EB1FE00ED76EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A77AADC1C8EB16300ED76EF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A77AADD1C8EB16300ED76EF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4A77AAF41C8EB1FE00ED76EF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A77AAF51C8EB1FE00ED76EF /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A77AAE01C8EB16300ED76EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A77AAE11C8EB16300ED76EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A77AAE31C8EB16300ED76EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = Est/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Est;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4A77AAE41C8EB16300ED76EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = Est/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Est;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4A77AAFC1C8EB1FE00ED76EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EstQuickAppExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Est.EstQuickAppExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4A77AAFD1C8EB1FE00ED76EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = EstQuickAppExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.Ryukie.Est.EstQuickAppExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A77AACB1C8EB16300ED76EF /* Build configuration list for PBXProject "Est" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A77AAE01C8EB16300ED76EF /* Debug */,
+				4A77AAE11C8EB16300ED76EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A77AAE21C8EB16300ED76EF /* Build configuration list for PBXNativeTarget "Est" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A77AAE31C8EB16300ED76EF /* Debug */,
+				4A77AAE41C8EB16300ED76EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4A77AAFB1C8EB1FE00ED76EF /* Build configuration list for PBXNativeTarget "EstQuickAppExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A77AAFC1C8EB1FE00ED76EF /* Debug */,
+				4A77AAFD1C8EB1FE00ED76EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A77AAC81C8EB16300ED76EF /* Project object */;
+}
