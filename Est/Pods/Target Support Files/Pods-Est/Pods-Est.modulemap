@@ -1,0 +1,6 @@
+framework module Pods_Est {
+  umbrella header "Pods-Est-umbrella.h"
+
+  export *
+  module * { export * }
+}

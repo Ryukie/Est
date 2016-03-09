@@ -1,0 +1,6 @@
+framework module Pods_EstQuickAppExtension {
+  umbrella header "Pods-EstQuickAppExtension-umbrella.h"
+
+  export *
+  module * { export * }
+}
