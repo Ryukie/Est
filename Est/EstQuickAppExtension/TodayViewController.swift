@@ -9,11 +9,27 @@
 import UIKit
 import NotificationCenter
 
-class TodayViewController: UIViewController, NCWidgetProviding {
+let appIconWidth : CGFloat = 50
+let appIconHeight : CGFloat = appIconWidth
+
+class TodayViewController: UIViewController, NCWidgetProviding ,UICollectionViewDataSource,UICollectionViewDelegate{
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view from its nib.
+        prepareCollectionView()
+    }
+    
+    private func prepareCollectionView () {
+        cv_apps.registerClass(RYAppCell.self, forCellWithReuseIdentifier: "AppCell")
+        cv_apps.backgroundColor = .None//消除背景
+        let cv_Wid : CGFloat = UIScreen.mainScreen().bounds.width
+        let cv_Hig : CGFloat = 151
+        self.preferredContentSize = CGSizeMake(cv_Wid, cv_Hig)
+        
+        fl_appFlowLayout.minimumInteritemSpacing = 10
+        fl_appFlowLayout.minimumLineSpacing = 10
+        fl_appFlowLayout.scrollDirection = .Vertical
+        fl_appFlowLayout.itemSize = CGSizeMake(appIconWidth, appIconHeight)
     }
     
     override func didReceiveMemoryWarning() {
@@ -22,13 +38,23 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
-
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
 
         completionHandler(NCUpdateResult.NewData)
     }
+    func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+        let insets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return insets
+    }
     
+    @IBOutlet weak var cv_apps: UICollectionView!
+    @IBOutlet weak var fl_appFlowLayout: UICollectionViewFlowLayout!
+}
+extension TodayViewController {
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = cv_apps.dequeueReusableCellWithReuseIdentifier("AppCell", forIndexPath: indexPath) as! RYAppCell
+        return cell
+    }
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 9
+    }
 }

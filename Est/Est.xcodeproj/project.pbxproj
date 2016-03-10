@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A524CD71C90411F00CF4096 /* RYAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A524CD61C90411F00CF4096 /* RYAppCell.swift */; };
 		4A77AAD41C8EB16300ED76EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AAD31C8EB16300ED76EF /* AppDelegate.swift */; };
 		4A77AADB1C8EB16300ED76EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A77AADA1C8EB16300ED76EF /* Assets.xcassets */; };
 		4A77AADE1C8EB16300ED76EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A77AADC1C8EB16300ED76EF /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A524CD61C90411F00CF4096 /* RYAppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYAppCell.swift; sourceTree = "<group>"; };
 		4A77AAD01C8EB16300ED76EF /* Est.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Est.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A77AAD31C8EB16300ED76EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A77AADA1C8EB16300ED76EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A524CD51C9040FA00CF4096 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A524CD61C90411F00CF4096 /* RYAppCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		4A77AAC71C8EB16300ED76EF = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		4A77AAF11C8EB1FE00ED76EF /* EstQuickAppExtension */ = {
 			isa = PBXGroup;
 			children = (
+				4A524CD51C9040FA00CF4096 /* View */,
 				4A77AAF21C8EB1FE00ED76EF /* TodayViewController.swift */,
 				4A77AAF41C8EB1FE00ED76EF /* MainInterface.storyboard */,
 				4A77AAF71C8EB1FE00ED76EF /* Info.plist */,
@@ -464,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A524CD71C90411F00CF4096 /* RYAppCell.swift in Sources */,
 				4A77AAF31C8EB1FE00ED76EF /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
