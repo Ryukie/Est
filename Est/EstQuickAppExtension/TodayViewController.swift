@@ -22,7 +22,7 @@ class TodayViewController: UIViewController, NCWidgetProviding ,UICollectionView
         cv_apps.backgroundColor = .None//消除背景
         cv_apps.scrollEnabled = false
         let cv_Wid : CGFloat = UIScreen.mainScreen().bounds.width
-        let cv_Hig : CGFloat = 151
+        let cv_Hig : CGFloat = 171
         self.preferredContentSize = CGSizeMake(cv_Wid, cv_Hig)
         
         fl_appFlowLayout.minimumInteritemSpacing = 10
@@ -45,8 +45,8 @@ class TodayViewController: UIViewController, NCWidgetProviding ,UICollectionView
         return insets
     }
     
-    @IBOutlet weak var cv_apps: UICollectionView!
-    @IBOutlet weak var fl_appFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var cv_apps : UICollectionView!
+    @IBOutlet weak var fl_appFlowLayout : UICollectionViewFlowLayout!
 }
 extension TodayViewController {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

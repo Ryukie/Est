@@ -28,6 +28,9 @@
 		4AC1D89E1C92637300589640 /* EstSharedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1D88F1C92628800589640 /* EstSharedKit.framework */; };
 		4AC1D8AE1C92696100589640 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC1D8AA1C92693B00589640 /* Global.swift */; };
 		4AC1D8AF1C92696100589640 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC1D8AB1C92693B00589640 /* UIColor+Extension.swift */; };
+		4AC1D8B21C92B94800589640 /* AppList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4AC1D8B11C92B94800589640 /* AppList.plist */; };
+		4AC1D8B41C92D54F00589640 /* RYApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC1D8B31C92D54F00589640 /* RYApp.swift */; };
+		4AC1D8B61C92D63A00589640 /* RYAppCellInside.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC1D8B51C92D63A00589640 /* RYAppCellInside.swift */; };
 		952D2384B14DAECA73511F9E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742FA146E6E51279B66F34BB /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +102,9 @@
 		4AC1D8931C92628800589640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AC1D8AA1C92693B00589640 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		4AC1D8AB1C92693B00589640 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4AC1D8B11C92B94800589640 /* AppList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppList.plist; sourceTree = "<group>"; };
+		4AC1D8B31C92D54F00589640 /* RYApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYApp.swift; sourceTree = "<group>"; };
+		4AC1D8B51C92D63A00589640 /* RYAppCellInside.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYAppCellInside.swift; sourceTree = "<group>"; };
 		742FA146E6E51279B66F34BB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE94AC125932A28326E49E65 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D366E7E9C37EA7A4AA9DF69B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +235,8 @@
 		4A77AB021C8EB3D500ED76EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4AC1D8B11C92B94800589640 /* AppList.plist */,
+				4AC1D8B31C92D54F00589640 /* RYApp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 		4A77AB031C8EB3D500ED76EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4AC1D8B51C92D63A00589640 /* RYAppCellInside.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -485,6 +494,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC1D8B21C92B94800589640 /* AppList.plist in Resources */,
 				4A77AB1D1C8EF71400ED76EF /* OptionMainView.plist in Resources */,
 				4A77AADE1C8EB16300ED76EF /* LaunchScreen.storyboard in Resources */,
 				4A77AADB1C8EB16300ED76EF /* Assets.xcassets in Resources */,
@@ -563,11 +573,13 @@
 			files = (
 				4A77AB141C8EB66E00ED76EF /* RYOptionTBVC.swift in Sources */,
 				4A77AB121C8EB5F800ED76EF /* RYTabVC.swift in Sources */,
+				4AC1D8B41C92D54F00589640 /* RYApp.swift in Sources */,
 				4A77AB161C8EB68300ED76EF /* RYDeskTopVC.swift in Sources */,
 				4A77AB101C8EB5A500ED76EF /* RYMainNaviVC.swift in Sources */,
 				4A77AB181C8EC63100ED76EF /* RYOptionCell.swift in Sources */,
 				4A77AAD41C8EB16300ED76EF /* AppDelegate.swift in Sources */,
 				4A77AB201C8EF91300ED76EF /* RYOptionModel.swift in Sources */,
+				4AC1D8B61C92D63A00589640 /* RYAppCellInside.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

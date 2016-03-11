@@ -20,8 +20,11 @@ public let col_darkGray = UIColor.darkGrayColor()
 /**
 *  Option页面 plist文件路径
 */
-public  let optionPlistPath : String = NSBundle.mainBundle().pathForResource("OptionMainView.plist", ofType: nil)!
+public let optionPlistPath : String = NSBundle.mainBundle().pathForResource("OptionMainView.plist", ofType: nil)!
+public let appListPath = NSBundle.mainBundle().pathForResource("AppList.plist", ofType: nil)
+
 
 /// appIconSize
-public let appIconWidth : CGFloat = 50
+public let appIconWidth : CGFloat = 60
 public let appIconHeight : CGFloat = appIconWidth
+public let appNameLableHeight : CGFloat = 20
