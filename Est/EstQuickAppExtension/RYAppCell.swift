@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import EstSharedKit
 
 class RYAppCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = UIColor.blueColor()
+        contentView.backgroundColor = UIColor.randomColor()
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
     }
 
     required init?(coder aDecoder: NSCoder) {

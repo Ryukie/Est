@@ -8,9 +8,7 @@
 
 import UIKit
 import NotificationCenter
-
-let appIconWidth : CGFloat = 50
-let appIconHeight : CGFloat = appIconWidth
+import EstSharedKit
 
 class TodayViewController: UIViewController, NCWidgetProviding ,UICollectionViewDataSource,UICollectionViewDelegate{
         
@@ -22,6 +20,7 @@ class TodayViewController: UIViewController, NCWidgetProviding ,UICollectionView
     private func prepareCollectionView () {
         cv_apps.registerClass(RYAppCell.self, forCellWithReuseIdentifier: "AppCell")
         cv_apps.backgroundColor = .None//消除背景
+        cv_apps.scrollEnabled = false
         let cv_Wid : CGFloat = UIScreen.mainScreen().bounds.width
         let cv_Hig : CGFloat = 151
         self.preferredContentSize = CGSizeMake(cv_Wid, cv_Hig)

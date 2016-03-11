@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EstSharedKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
