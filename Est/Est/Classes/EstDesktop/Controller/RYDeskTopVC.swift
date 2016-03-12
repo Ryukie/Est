@@ -11,7 +11,7 @@ import EstSharedKit
 
 class RYDeskTopVC: UIViewController {
 
-
+    lazy var appsAdded = RYOptionModel.models()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,6 @@ extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource {
         return cell
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return appsAdded.count
     }
 }

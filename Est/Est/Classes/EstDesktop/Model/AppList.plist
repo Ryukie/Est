@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>New item</key>
+<array>
 	<dict>
 		<key>name</key>
 		<string>wechat</string>
@@ -11,7 +10,6 @@
 		<key>icon</key>
 		<string></string>
 	</dict>
-	<key>New item - 2</key>
 	<dict>
 		<key>name</key>
 		<string>settings</string>
@@ -20,7 +18,6 @@
 		<key>icon</key>
 		<string></string>
 	</dict>
-	<key>New item - 3</key>
 	<dict>
 		<key>name</key>
 		<string>evernote</string>
@@ -29,7 +26,6 @@
 		<key>icon</key>
 		<string></string>
 	</dict>
-	<key>New item - 4</key>
 	<dict>
 		<key>name</key>
 		<string>VPN</string>
@@ -38,7 +34,6 @@
 		<key>icon</key>
 		<string></string>
 	</dict>
-	<key>New item - 5</key>
 	<dict>
 		<key>name</key>
 		<string>AppStore</string>
@@ -47,7 +42,6 @@
 		<key>icon</key>
 		<string></string>
 	</dict>
-	<key>New item - 6</key>
 	<dict>
 		<key>name</key>
 		<string>Safari</string>
@@ -56,7 +50,6 @@
 		<key>icon</key>
 		<string></string>
 	</dict>
-	<key>New item - 7</key>
 	<dict>
 		<key>name</key>
 		<string>QQ</string>
@@ -65,5 +58,5 @@
 		<key>icon</key>
 		<string></string>
 	</dict>
-</dict>
+</array>
 </plist>

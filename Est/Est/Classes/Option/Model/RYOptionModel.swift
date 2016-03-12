@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import EstSharedKit
 
 class RYOptionModel: NSObject {
     var title : String?
     var targetVC : String?
-//    class func initWithDict (dict : [String : AnyObject]) {
-//        super.initialize()
-//
-//    }
+    
+    class func models ()-> NSArray{
+        let arr = NSArray(contentsOfFile: appListPath!)
+        return arr!
+    }
+    
     convenience init(dict:[String : AnyObject]) {
         self.init()
         setValuesForKeysWithDictionary(dict)
