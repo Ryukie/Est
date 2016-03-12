@@ -10,14 +10,19 @@ import UIKit
 import SnapKit
 import EstSharedKit
 
+@objc protocol RYAppCellInsideDelegate : NSObjectProtocol {
+    func addApp ()
+}
+
 class RYAppCellInside: UICollectionViewCell {
     
     var app_URL : String?
+    weak var delegate : RYAppCellInsideDelegate?
     
     var app_model : RYApp? {
         didSet {
             lb_appName.text = app_model?.app_name
-            iv_appIcon.image = UIImage(named: (app_model?.app_iconName)!)
+            bt_appIcon.setBackgroundImage(UIImage(named: (app_model?.app_iconName)!), forState: .Normal)
         }
     }
     override init(frame: CGRect) {
@@ -31,27 +36,34 @@ class RYAppCellInside: UICollectionViewCell {
     private func prepareCell () {
         backgroundColor = .None
         
-        contentView.addSubview(iv_appIcon)
+        contentView.addSubview(bt_appIcon)
         contentView.addSubview(lb_appName)
-        iv_appIcon.snp_makeConstraints { (make) -> Void in
+        bt_appIcon.snp_makeConstraints { (make) -> Void in
             make.height.equalTo(appIconHeight)
             make.left.top.right.equalTo(self.contentView)
         }
         lb_appName.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(iv_appIcon.snp_bottom)
+            make.top.equalTo(bt_appIcon.snp_bottom)
             make.left.right.bottom.equalTo(self.contentView)
             make.height.equalTo(appNameLableHeight)
         }
         
-        iv_appIcon.image = UIImage(named: "bilibili60x60")
-        iv_appIcon.layer.cornerRadius = 8
-        iv_appIcon.layer.masksToBounds = true
+        bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add"), forState: .Normal)
+        bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add_highlighted"), forState: .Highlighted)
+        bt_appIcon.layer.cornerRadius = 8
+        bt_appIcon.layer.masksToBounds = true
+        bt_appIcon.addTarget(self, action: "clickAppIcon", forControlEvents: .TouchUpInside)
         
-        lb_appName.text = "BiliBili"
+        lb_appName.text = ""
         lb_appName.textAlignment = .Center
         
     }
+    @objc private func clickAppIcon () {
+//        let navi = UINavigationController(rootViewController: RYAppEditVC())
+        delegate?.addApp()
+    }
+    
     
     private lazy var lb_appName : UILabel = UILabel()
-    private lazy var iv_appIcon : UIImageView = UIImageView()
+    private lazy var bt_appIcon : UIButton = UIButton()
 }

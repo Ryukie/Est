@@ -22,6 +22,7 @@
 		4A77AB181C8EC63100ED76EF /* RYOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB171C8EC63100ED76EF /* RYOptionCell.swift */; };
 		4A77AB1D1C8EF71400ED76EF /* OptionMainView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A77AB1C1C8EF71400ED76EF /* OptionMainView.plist */; };
 		4A77AB201C8EF91300ED76EF /* RYOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB1F1C8EF91300ED76EF /* RYOptionModel.swift */; };
+		4A7B58271C93BDCB000D47A4 /* RYAppEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B58261C93BDCB000D47A4 /* RYAppEditVC.swift */; };
 		4AC1D8921C92628800589640 /* EstSharedKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC1D8911C92628800589640 /* EstSharedKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AC1D8961C92628800589640 /* EstSharedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1D88F1C92628800589640 /* EstSharedKit.framework */; };
 		4AC1D8971C92628800589640 /* EstSharedKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1D88F1C92628800589640 /* EstSharedKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -95,6 +96,7 @@
 		4A77AB171C8EC63100ED76EF /* RYOptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYOptionCell.swift; sourceTree = "<group>"; };
 		4A77AB1C1C8EF71400ED76EF /* OptionMainView.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OptionMainView.plist; sourceTree = "<group>"; };
 		4A77AB1F1C8EF91300ED76EF /* RYOptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYOptionModel.swift; sourceTree = "<group>"; };
+		4A7B58261C93BDCB000D47A4 /* RYAppEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYAppEditVC.swift; sourceTree = "<group>"; };
 		4AC1D8881C9261EB00589640 /* Est.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Est.entitlements; sourceTree = "<group>"; };
 		4AC1D8891C92624E00589640 /* EstQuickAppExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EstQuickAppExtension.entitlements; sourceTree = "<group>"; };
 		4AC1D88F1C92628800589640 /* EstSharedKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EstSharedKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				4AC1D8B51C92D63A00589640 /* RYAppCellInside.swift */,
+				4A7B58261C93BDCB000D47A4 /* RYAppEditVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -580,6 +583,7 @@
 				4A77AAD41C8EB16300ED76EF /* AppDelegate.swift in Sources */,
 				4A77AB201C8EF91300ED76EF /* RYOptionModel.swift in Sources */,
 				4AC1D8B61C92D63A00589640 /* RYAppCellInside.swift in Sources */,
+				4A7B58271C93BDCB000D47A4 /* RYAppEditVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,6 +868,7 @@
 				4AC1D89A1C92628800589640 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

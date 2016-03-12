@@ -41,12 +41,19 @@ class RYDeskTopVC: UIViewController {
     
     private var cv_appIcons : UICollectionView?
 }
-extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource {
+extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAppCellInsideDelegate {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! RYAppCellInside
+        cell.delegate = self
         return cell
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return appsAdded.count
+    }
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    }
+    func addApp() {
+        let navi = UINavigationController(rootViewController: RYAppEditVC())
+        presentViewController(navi, animated: true, completion: nil)
     }
 }
