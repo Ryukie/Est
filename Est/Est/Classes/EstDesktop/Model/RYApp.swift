@@ -12,7 +12,7 @@ import EstSharedKit
 class RYApp: NSObject {
     var name : String?
     var icon : String?
-    var url : String?
+    var url : String? //URL Schemes
     var app_index : Int64?
     
     convenience init (dict:[String : AnyObject]) {

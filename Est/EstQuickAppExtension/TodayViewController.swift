@@ -58,4 +58,10 @@ extension TodayViewController {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 9
     }
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let str: String = "prefs:"
+//        let str : String = "weixin://com.wx.test?viewId=letters"
+        let url : NSURL = NSURL(string: str)!
+        extensionContext?.openURL(url, completionHandler: nil)
+    }
 }

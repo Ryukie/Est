@@ -12,6 +12,8 @@ import EstSharedKit
 class RYDeskTopVC: UIViewController {
 
     lazy var appsList = RYApp.apps()
+    var appAddedToLauncher = [RYApp]()
+//    var appIndexInLauncher : Int64 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +46,7 @@ class RYDeskTopVC: UIViewController {
     
     private var cv_appIcons : UICollectionView?
 }
-extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAppCellInsideDelegate {
+extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAppCellInsideDelegate,RYAppEditVCDelegate {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! RYAppCellInside
         cell.delegate = self
@@ -58,7 +60,15 @@ extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAp
     }
     //点击添加按钮的代理方法
     func addApp(apps: [RYApp]) {
-        let navi = UINavigationController(rootViewController: RYAppEditVC(apps: apps ))
+        let editoeVC = RYAppEditVC(apps: apps )
+        editoeVC.delegate = self
+        let navi = UINavigationController(rootViewController: editoeVC)
         presentViewController(navi, animated: true, completion: nil)
+    }
+    func addAppToLauncher (app: RYApp){
+//        app.app_index = appIndexInLauncher
+        appAddedToLauncher.append(app)
+//        appIndexInLauncher++
+        print(app.name)
     }
 }

@@ -10,9 +10,16 @@ import UIKit
 import EstSharedKit
 
 let reuseIdentifier = "Cell"
+
+@objc protocol RYAppEditVCDelegate : NSObjectProtocol {
+    func addAppToLauncher (app: RYApp)
+}
+
 class RYAppEditVC: UITableViewController {
     
+    weak var delegate : RYAppEditVCDelegate?
     var appsList : [RYApp]?
+    var selectApp : RYApp?
     
     convenience init(apps:[RYApp]?) {
         self.init()
@@ -23,7 +30,7 @@ class RYAppEditVC: UITableViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "clickCancle")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "clickDone")
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.registerClass(RYEditorCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +40,10 @@ class RYAppEditVC: UITableViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     @objc private func clickDone () {
-        dismissViewControllerAnimated(true, completion: nil)
+        if (selectApp != nil) {
+            delegate?.addAppToLauncher(selectApp!)
+            dismissViewControllerAnimated(true, completion: nil)
+        }
     }
 }
 // MARK: - 数据源及代理方法
@@ -48,10 +58,14 @@ extension RYAppEditVC {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! RYEditorCell
         cell.backgroundColor = UIColor.randomColor()
         let app = appsList![indexPath.row]
-        cell.textLabel?.text = app.name
+        cell.app_model = app
         return cell
+    }
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let currentApp = appsList![indexPath.row]
+        selectApp = currentApp
     }
 }

@@ -4,25 +4,25 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>wechat</string>
+		<string>Wechat</string>
 		<key>url</key>
-		<string></string>
+		<string>weixin://com.wx.test?viewId=letters</string>
 		<key>icon</key>
 		<string></string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>settings</string>
+		<string>Settings</string>
 		<key>url</key>
-		<string></string>
+		<string>prefs:</string>
 		<key>icon</key>
 		<string></string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>evernote</string>
+		<string>Evernote</string>
 		<key>url</key>
-		<string></string>
+		<string>evernote://</string>
 		<key>icon</key>
 		<string></string>
 	</dict>
@@ -30,7 +30,7 @@
 		<key>name</key>
 		<string>VPN</string>
 		<key>url</key>
-		<string></string>
+		<string>prefs:root=General&amp;path=Network/VPN</string>
 		<key>icon</key>
 		<string></string>
 	</dict>
@@ -38,7 +38,7 @@
 		<key>name</key>
 		<string>AppStore</string>
 		<key>url</key>
-		<string></string>
+		<string>appstore://</string>
 		<key>icon</key>
 		<string></string>
 	</dict>
@@ -46,7 +46,7 @@
 		<key>name</key>
 		<string>Safari</string>
 		<key>url</key>
-		<string></string>
+		<string>safari://</string>
 		<key>icon</key>
 		<string></string>
 	</dict>
@@ -54,7 +54,55 @@
 		<key>name</key>
 		<string>QQ</string>
 		<key>url</key>
+		<string>mqq:// </string>
+		<key>icon</key>
 		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>DoubanFM</string>
+		<key>url</key>
+		<string>doubanradio:// </string>
+		<key>icon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Weico</string>
+		<key>url</key>
+		<string>weico:// </string>
+		<key>icon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Alipay</string>
+		<key>url</key>
+		<string>alipay:// </string>
+		<key>icon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>YoudaoDict</string>
+		<key>url</key>
+		<string>yddictproapp:// </string>
+		<key>icon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>ZhiHu</string>
+		<key>url</key>
+		<string>zhihu://</string>
+		<key>icon</key>
+		<string></string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>NetEasyNews</string>
+		<key>url</key>
+		<string>newsapp://</string>
 		<key>icon</key>
 		<string></string>
 	</dict>
