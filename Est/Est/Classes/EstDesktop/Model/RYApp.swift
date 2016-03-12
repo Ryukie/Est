@@ -14,21 +14,12 @@ class RYApp: NSObject {
     var icon : String?
     var url : String? //URL Schemes
     var app_index : Int64?
-    var isAdded : Bool = false //是否被添加进数组
+//    var isAdded : Bool = false //是否被添加进数组
     var isShowed : Bool = false //是否被添加到展示界面上了
     
     convenience init (dict:[String : AnyObject]) {
         self.init()
         setValuesForKeysWithDictionary(dict)
     }
-    
-    class func apps () -> [RYApp] {
-        let arr = NSArray(contentsOfFile: appListPath!)
-        var tempArr = [RYApp]()
-        for dict in arr! {
-            let app = RYApp(dict: dict as! [String : AnyObject])
-            tempArr.append(app)
-        }
-        return tempArr
-    }
+
 }

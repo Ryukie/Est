@@ -11,7 +11,8 @@ import SnapKit
 import EstSharedKit
 
 @objc protocol RYAppCellInsideDelegate : NSObjectProtocol {
-    func addApp (apps:[RYApp])
+    func addApp (cell:RYAppCellInside)
+    func deleteApp (cell:RYAppCellInside)
 }
 
 class RYAppCellInside: UICollectionViewCell {
@@ -47,6 +48,7 @@ class RYAppCellInside: UICollectionViewCell {
         
         contentView.addSubview(bt_appIcon)
         contentView.addSubview(lb_appName)
+        contentView.addSubview(bt_delete)
         bt_appIcon.snp_makeConstraints { (make) -> Void in
             make.height.equalTo(appIconHeight)
             make.left.top.right.equalTo(self.contentView)
@@ -56,23 +58,33 @@ class RYAppCellInside: UICollectionViewCell {
             make.left.right.bottom.equalTo(self.contentView)
             make.height.equalTo(appNameLableHeight)
         }
-        
-//        bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add"), forState: .Normal)
-//        bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add_highlighted"), forState: .Highlighted)
+        bt_delete.snp_makeConstraints { (make) -> Void in
+            make.centerX.equalTo(contentView.snp_left)
+            make.centerY.equalTo(contentView.snp_top)
+            make.width.equalTo(20)
+            make.height.equalTo(20)
+        }
+
         bt_appIcon.layer.cornerRadius = 8
         bt_appIcon.layer.masksToBounds = true
         bt_appIcon.addTarget(self, action: "clickAppIcon", forControlEvents: .TouchUpInside)
         
+        
         lb_appName.text = ""
         lb_appName.textAlignment = .Center
         
+        bt_delete.setBackgroundImage(UIImage(named: "app_delete"), forState: .Normal)
+        bt_delete.addTarget(self, action: "clickDeleteBtn", forControlEvents: .TouchUpInside)
     }
     @objc private func clickAppIcon () {
-        let apps : [RYApp]? = appsList!
-        delegate?.addApp(apps!)
+        delegate?.addApp(self)
     }
-    
+    @objc private func clickDeleteBtn () {
+        print(__FUNCTION__)
+        delegate?.deleteApp(self)
+    }
     
     private lazy var lb_appName : UILabel = UILabel()
     private lazy var bt_appIcon : UIButton = UIButton()
+    private lazy var bt_delete : UIButton = UIButton()
 }

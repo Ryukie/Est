@@ -11,7 +11,6 @@ import EstSharedKit
 
 class RYDeskTopVC: UIViewController {
 
-    lazy var appsList = RYApp.apps()
     var appAddedToLauncher = [RYApp]()
 //    var appIndexInLauncher : Int64 = 0
     
@@ -50,39 +49,50 @@ extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAp
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! RYAppCellInside
         cell.delegate = self
-        
+        cell.tag = indexPath.item
         if indexPath.item < appAddedToLauncher.count {//返回已经添加进数组的Cell
             let app = appAddedToLauncher[indexPath.item]
                 cell.app_model = app
-                cell.appsList = appsList
                 return cell
         } else {//当库存app数量少于界面cell的数量的时候会越界
             cell.app_model = nil
-            cell.appsList = appsList
             return cell
         }
 
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 16
+        
+        if appAddedToLauncher.count == 0 {
+            return 1
+        }else if appAddedToLauncher.count>=16 {
+            return 16
+        }else {
+            return appAddedToLauncher.count + 1
+        }
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     }
     //点击添加按钮的代理方法
-    func addApp(apps: [RYApp]) {
-        let editoeVC = RYAppEditVC(apps: apps )
+    func addApp(cell:RYAppCellInside) {
+        let editoeVC = RYAppEditVC(style: .Plain)
         editoeVC.delegate = self
+        editoeVC.fromCell = cell
         let navi = UINavigationController(rootViewController: editoeVC)
         presentViewController(navi, animated: true, completion: nil)
     }
-    func addAppToLauncher (app: RYApp){
-        app.isAdded = true
-        appAddedToLauncher.append(app)
-        for i in 0...appAddedToLauncher.count {
-            app.app_index = Int64(i)
+    func deleteApp(cell:RYAppCellInside) {
+        if appAddedToLauncher.count != 0 {
+            appAddedToLauncher.removeAtIndex(cell.tag)
+            cv_appIcons?.reloadData()
         }
-        print(app.app_index)
+    }
+    func addAppToLauncher (app: RYApp,toCell:RYAppCellInside){
+        if toCell.app_model != nil {
+            appAddedToLauncher.removeAtIndex(toCell.tag)
+            appAddedToLauncher.insert(app , atIndex: toCell.tag)
+        }else {
+            appAddedToLauncher.append(app)
+        }
         cv_appIcons?.reloadData()
-//        print(app.name)
     }
 }

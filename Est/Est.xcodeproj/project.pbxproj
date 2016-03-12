@@ -24,6 +24,7 @@
 		4A77AB201C8EF91300ED76EF /* RYOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A77AB1F1C8EF91300ED76EF /* RYOptionModel.swift */; };
 		4A7B58271C93BDCB000D47A4 /* RYAppEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B58261C93BDCB000D47A4 /* RYAppEditVC.swift */; };
 		4A7B58291C9430B5000D47A4 /* RYEditorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B58281C9430B5000D47A4 /* RYEditorCell.swift */; };
+		4A7B582B1C945799000D47A4 /* RYAppPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7B582A1C945799000D47A4 /* RYAppPackage.swift */; };
 		4AC1D8921C92628800589640 /* EstSharedKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AC1D8911C92628800589640 /* EstSharedKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AC1D8961C92628800589640 /* EstSharedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1D88F1C92628800589640 /* EstSharedKit.framework */; };
 		4AC1D8971C92628800589640 /* EstSharedKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC1D88F1C92628800589640 /* EstSharedKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -99,6 +100,7 @@
 		4A77AB1F1C8EF91300ED76EF /* RYOptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYOptionModel.swift; sourceTree = "<group>"; };
 		4A7B58261C93BDCB000D47A4 /* RYAppEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RYAppEditVC.swift; path = ../View/RYAppEditVC.swift; sourceTree = "<group>"; };
 		4A7B58281C9430B5000D47A4 /* RYEditorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYEditorCell.swift; sourceTree = "<group>"; };
+		4A7B582A1C945799000D47A4 /* RYAppPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RYAppPackage.swift; path = ../../EstDesktop/Model/RYAppPackage.swift; sourceTree = "<group>"; };
 		4AC1D8881C9261EB00589640 /* Est.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Est.entitlements; sourceTree = "<group>"; };
 		4AC1D8891C92624E00589640 /* EstQuickAppExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = EstQuickAppExtension.entitlements; sourceTree = "<group>"; };
 		4AC1D88F1C92628800589640 /* EstSharedKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EstSharedKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,6 +356,7 @@
 			children = (
 				4AC1D8AA1C92693B00589640 /* Global.swift */,
 				4AC1D8AB1C92693B00589640 /* UIColor+Extension.swift */,
+				4A7B582A1C945799000D47A4 /* RYAppPackage.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				4A77AB121C8EB5F800ED76EF /* RYTabVC.swift in Sources */,
 				4AC1D8B41C92D54F00589640 /* RYApp.swift in Sources */,
 				4A77AB161C8EB68300ED76EF /* RYDeskTopVC.swift in Sources */,
+				4A7B582B1C945799000D47A4 /* RYAppPackage.swift in Sources */,
 				4A77AB101C8EB5A500ED76EF /* RYMainNaviVC.swift in Sources */,
 				4A77AB181C8EC63100ED76EF /* RYOptionCell.swift in Sources */,
 				4A77AAD41C8EB16300ED76EF /* AppDelegate.swift in Sources */,

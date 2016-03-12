@@ -12,20 +12,24 @@ import EstSharedKit
 let reuseIdentifier = "Cell"
 
 @objc protocol RYAppEditVCDelegate : NSObjectProtocol {
-    func addAppToLauncher (app: RYApp)
+    func addAppToLauncher (app: RYApp,toCell:RYAppCellInside)
 }
 
 class RYAppEditVC: UITableViewController {
     
     weak var delegate : RYAppEditVCDelegate?
-    var appsList : [RYApp]?
+    var appsList : [RYApp] = RYAppPackage.sharedAppPackage.appsPackage
     var selectApp : RYApp?
-    
-    convenience init(apps:[RYApp]?) {
-        self.init()
-        appsList = apps
+    var fromCell : RYAppCellInside?
+
+    override init(style: UITableViewStyle) {
+        super.init(style: style)
     }
 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "clickCancle")
@@ -41,7 +45,7 @@ class RYAppEditVC: UITableViewController {
     }
     @objc private func clickDone () {
         if (selectApp != nil) {
-            delegate?.addAppToLauncher(selectApp!)
+            delegate?.addAppToLauncher(selectApp!, toCell: fromCell!)
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
@@ -54,18 +58,18 @@ extension RYAppEditVC {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (appsList?.count)!
+        return appsList.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! RYEditorCell
         cell.backgroundColor = UIColor.randomColor()
-        let app = appsList![indexPath.row]
+        let app = appsList[indexPath.row]
         cell.app_model = app
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let currentApp = appsList![indexPath.row]
+        let currentApp = appsList[indexPath.row]
         selectApp = currentApp
     }
 }
