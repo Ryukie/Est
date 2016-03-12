@@ -11,7 +11,7 @@ import EstSharedKit
 
 class RYDeskTopVC: UIViewController {
 
-    lazy var appsAdded = RYOptionModel.models()
+    lazy var appsList = RYOptionModel.models()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,7 @@ class RYDeskTopVC: UIViewController {
         
         let cv_frame = CGRectMake(0, 0, scrW, scrH)
         let cv_fl = UICollectionViewFlowLayout()
+        let sectionMargin : CGFloat = 20
         cv_appIcons = UICollectionView(frame: cv_frame, collectionViewLayout: cv_fl)
         cv_appIcons!.frame = cv_frame
         cv_appIcons!.collectionViewLayout = cv_fl
@@ -30,8 +31,9 @@ class RYDeskTopVC: UIViewController {
         //SetFlowLayout
         cv_fl.minimumInteritemSpacing = 10
         cv_fl.minimumLineSpacing = 10
-        cv_fl.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        cv_fl.sectionInset = UIEdgeInsetsMake(sectionMargin, sectionMargin, sectionMargin, sectionMargin)
         cv_fl.itemSize = CGSizeMake(appIconWidth, appIconHeight+appNameLableHeight)
+        
         
         view.addSubview(cv_appIcons!)
         cv_appIcons!.delegate = self
@@ -45,15 +47,17 @@ extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAp
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! RYAppCellInside
         cell.delegate = self
+        cell.appsList = appsList
         return cell
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return appsAdded.count
+        return 20
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     }
-    func addApp() {
-        let navi = UINavigationController(rootViewController: RYAppEditVC())
+    //点击添加按钮的代理方法
+    func addApp(apps: [RYApp]) {
+        let navi = UINavigationController(rootViewController: RYAppEditVC(apps: apps))
         presentViewController(navi, animated: true, completion: nil)
     }
 }

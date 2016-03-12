@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import EstSharedKit
 
 let reuseIdentifier = "Cell"
 class RYAppEditVC: UITableViewController {
+    
+    var appsList : [RYApp]?
+    
+    convenience init(apps:[RYApp]) {
+        self.init()
+        appsList = apps
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +43,12 @@ class RYAppEditVC: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 12
+        return (appsList?.count)!
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        cell.backgroundColor = UIColor.randomColor()
         return cell
     }
 

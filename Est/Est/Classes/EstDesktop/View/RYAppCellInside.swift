@@ -11,18 +11,20 @@ import SnapKit
 import EstSharedKit
 
 @objc protocol RYAppCellInsideDelegate : NSObjectProtocol {
-    func addApp ()
+    func addApp (apps:[RYApp])
 }
 
 class RYAppCellInside: UICollectionViewCell {
     
     var app_URL : String?
+    var appsList : NSArray?
     weak var delegate : RYAppCellInsideDelegate?
     
     var app_model : RYApp? {
         didSet {
             lb_appName.text = app_model?.app_name
-            bt_appIcon.setBackgroundImage(UIImage(named: (app_model?.app_iconName)!), forState: .Normal)
+//            bt_appIcon.setBackgroundImage(UIImage(named: (app_model?.app_iconName)!), forState: .Normal)
+            bt_appIcon.setBackgroundImage(UIImage(named: "bilibili60x60"), forState: .Normal)
         }
     }
     override init(frame: CGRect) {
@@ -60,7 +62,8 @@ class RYAppCellInside: UICollectionViewCell {
     }
     @objc private func clickAppIcon () {
 //        let navi = UINavigationController(rootViewController: RYAppEditVC())
-        delegate?.addApp()
+        let apps : [RYApp] = appsList as! [RYApp]
+        delegate?.addApp(apps)
     }
     
     
