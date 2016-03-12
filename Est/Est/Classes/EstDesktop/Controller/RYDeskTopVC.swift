@@ -50,8 +50,18 @@ extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAp
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! RYAppCellInside
         cell.delegate = self
-        cell.appsList = appsList
-        return cell
+        
+        if indexPath.item < appAddedToLauncher.count {//返回已经添加进数组的Cell
+            let app = appAddedToLauncher[indexPath.item]
+                cell.app_model = app
+                cell.appsList = appsList
+                return cell
+        } else {//当库存app数量少于界面cell的数量的时候会越界
+            cell.app_model = nil
+            cell.appsList = appsList
+            return cell
+        }
+
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 16
@@ -66,9 +76,13 @@ extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAp
         presentViewController(navi, animated: true, completion: nil)
     }
     func addAppToLauncher (app: RYApp){
-//        app.app_index = appIndexInLauncher
+        app.isAdded = true
         appAddedToLauncher.append(app)
-//        appIndexInLauncher++
-        print(app.name)
+        for i in 0...appAddedToLauncher.count {
+            app.app_index = Int64(i)
+        }
+        print(app.app_index)
+        cv_appIcons?.reloadData()
+//        print(app.name)
     }
 }

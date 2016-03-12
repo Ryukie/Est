@@ -22,8 +22,16 @@ class RYAppCellInside: UICollectionViewCell {
     
     var app_model : RYApp? {
         didSet {
-            lb_appName.text = app_model?.name
-            bt_appIcon.setBackgroundImage(UIImage(named: "bilibili60x60"), forState: .Normal)
+            if app_model != nil {
+                lb_appName.text = app_model?.name
+                bt_appIcon.setBackgroundImage(UIImage(named: "bilibili60x60"), forState: .Normal)
+                bt_appIcon.setBackgroundImage(UIImage(named: "bilibili60x60"), forState: .Highlighted)
+            }else {
+                lb_appName.text = ""
+                bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add"), forState: .Normal)
+                bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add_highlighted"), forState: .Highlighted)
+            }
+            
         }
     }
     override init(frame: CGRect) {
@@ -49,8 +57,8 @@ class RYAppCellInside: UICollectionViewCell {
             make.height.equalTo(appNameLableHeight)
         }
         
-        bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add"), forState: .Normal)
-        bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add_highlighted"), forState: .Highlighted)
+//        bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add"), forState: .Normal)
+//        bt_appIcon.setBackgroundImage(UIImage(named: "app_pic_add_highlighted"), forState: .Highlighted)
         bt_appIcon.layer.cornerRadius = 8
         bt_appIcon.layer.masksToBounds = true
         bt_appIcon.addTarget(self, action: "clickAppIcon", forControlEvents: .TouchUpInside)
