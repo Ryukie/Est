@@ -19,7 +19,7 @@ class RYOptionTBVC: UITableViewController {
         prepareTableView()
     }
     private func prepareTableView () {
-        tableView.backgroundColor = col_lightGray
+        tableView.backgroundColor = col_purple
         tableView.registerClass(RYOptionCell.self, forCellReuseIdentifier: "reuseIdentifier")
         tableView.pagingEnabled = true
     }

@@ -16,6 +16,8 @@ public let col_red = UIColor.redColor()
 public let col_lightGray = UIColor.lightGrayColor()
 public let col_95White = UIColor(white: 0.95, alpha: 1)
 public let col_darkGray = UIColor.darkGrayColor()
+public let col_purple = UIColor.purpleColor()
+public let col_white = UIColor.whiteColor()
 
  /// option页面配置文件路径
 public let optionPlistPath : String = NSBundle.mainBundle().pathForResource("OptionMainView.plist", ofType: nil)!

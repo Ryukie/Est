@@ -7,19 +7,21 @@
 //
 
 import UIKit
+import EstSharedKit
 
 class RYOptionCell: UITableViewCell {
-
+	
     var optionModel : RYOptionModel? {
         didSet {
             textLabel?.text = optionModel!.title
+            textLabel?.textColor = col_95White
             detailTextLabel?.text = optionModel!.targetVC
         }
     }
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        contentView.backgroundColor = UIColor.randomColor()
+        backgroundColor = .None
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -15,7 +15,7 @@ class RYDeskTopVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = col_lightGray
+        view.backgroundColor = col_purple
         prepareCollectionView()
     }
     
@@ -23,17 +23,18 @@ class RYDeskTopVC: UIViewController {
         
         let cv_frame = CGRectMake(0, 0, scrW, scrH)
         let cv_fl = UICollectionViewFlowLayout()
-        let sectionMargin : CGFloat = 20
+        
         cv_appIcons = UICollectionView(frame: cv_frame, collectionViewLayout: cv_fl)
         cv_appIcons!.frame = cv_frame
         cv_appIcons!.collectionViewLayout = cv_fl
         cv_appIcons!.backgroundColor = .None
         //SetFlowLayout
-        cv_fl.minimumInteritemSpacing = 10
-        cv_fl.minimumLineSpacing = 10
+        let margin : CGFloat = (scrW - 4*appIconWidth)/5
+        let sectionMargin : CGFloat = margin
+        cv_fl.minimumInteritemSpacing = margin/2
+        cv_fl.minimumLineSpacing = margin/2
         cv_fl.sectionInset = UIEdgeInsetsMake(sectionMargin, sectionMargin, sectionMargin, sectionMargin)
         cv_fl.itemSize = CGSizeMake(appIconWidth, appIconHeight+appNameLableHeight)
-        
         
         view.addSubview(cv_appIcons!)
         cv_appIcons!.delegate = self
@@ -51,7 +52,7 @@ extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAp
         return cell
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return 16
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     }

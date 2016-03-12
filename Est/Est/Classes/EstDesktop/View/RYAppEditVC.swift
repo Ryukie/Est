@@ -24,36 +24,10 @@ class RYAppEditVC: UITableViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "clickCancle")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "clickDone")
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return (appsList?.count)!
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
-        let app = appsList![indexPath.row] 
-        cell.textLabel?.text = app.name
-        return cell
     }
     @objc private func clickCancle () {
         dismissViewControllerAnimated(true, completion: nil)
@@ -61,5 +35,23 @@ class RYAppEditVC: UITableViewController {
     @objc private func clickDone () {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+}
+// MARK: - 数据源及代理方法
+extension RYAppEditVC {
+    // MARK: - Table view data source
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (appsList?.count)!
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        cell.backgroundColor = UIColor.randomColor()
+        let app = appsList![indexPath.row]
+        cell.textLabel?.text = app.name
+        return cell
+    }
 }

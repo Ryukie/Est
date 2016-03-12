@@ -25,15 +25,17 @@ class TodayViewController: UIViewController, NCWidgetProviding ,UICollectionView
         let cv_Hig : CGFloat = 171
         self.preferredContentSize = CGSizeMake(cv_Wid, cv_Hig)
         
-        fl_appFlowLayout.minimumInteritemSpacing = 10
-        fl_appFlowLayout.minimumLineSpacing = 10
+        let margin : CGFloat = (scrW - 4*appIconWidth)/5
+        let sectionMargin : CGFloat = margin
+        fl_appFlowLayout.sectionInset = UIEdgeInsetsMake(0, sectionMargin, 0, sectionMargin)
+        fl_appFlowLayout.minimumInteritemSpacing = margin/2
+        fl_appFlowLayout.minimumLineSpacing = margin/2
         fl_appFlowLayout.scrollDirection = .Vertical
         fl_appFlowLayout.itemSize = CGSizeMake(appIconWidth, appIconHeight)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
