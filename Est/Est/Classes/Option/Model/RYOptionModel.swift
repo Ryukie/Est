@@ -14,7 +14,7 @@ class RYOptionModel: NSObject {
     var targetVC : String?
     
     class func models ()-> NSArray{
-        let arr = NSArray(contentsOfFile: appListPath!)
+        let arr = NSArray(contentsOfFile: optionPlistPath)
         return arr!
     }
     

@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import EstSharedKit
 
 class RYApp: NSObject {
-    var app_name : String?
-    var app_iconName : String?
-    var app_URL : String?
+    var name : String?
+    var icon : String?
+    var url : String?
     var app_index : Int64?
     
     convenience init (dict:[String : AnyObject]) {
@@ -19,4 +20,13 @@ class RYApp: NSObject {
         setValuesForKeysWithDictionary(dict)
     }
     
+    class func apps () -> [RYApp] {
+        let arr = NSArray(contentsOfFile: appListPath!)
+        var tempArr = [RYApp]()
+        for dict in arr! {
+            let app = RYApp(dict: dict as! [String : AnyObject])
+            tempArr.append(app)
+        }
+        return tempArr
+    }
 }

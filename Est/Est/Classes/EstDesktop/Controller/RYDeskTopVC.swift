@@ -11,7 +11,7 @@ import EstSharedKit
 
 class RYDeskTopVC: UIViewController {
 
-    lazy var appsList = RYOptionModel.models()
+    lazy var appsList = RYApp.apps()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ extension RYDeskTopVC : UICollectionViewDelegate,UICollectionViewDataSource,RYAp
     }
     //点击添加按钮的代理方法
     func addApp(apps: [RYApp]) {
-        let navi = UINavigationController(rootViewController: RYAppEditVC(apps: apps))
+        let navi = UINavigationController(rootViewController: RYAppEditVC(apps: apps ))
         presentViewController(navi, animated: true, completion: nil)
     }
 }

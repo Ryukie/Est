@@ -17,12 +17,12 @@ import EstSharedKit
 class RYAppCellInside: UICollectionViewCell {
     
     var app_URL : String?
-    var appsList : NSArray?
+    var appsList : [RYApp]?
     weak var delegate : RYAppCellInsideDelegate?
     
     var app_model : RYApp? {
         didSet {
-            lb_appName.text = app_model?.app_name
+            lb_appName.text = app_model?.name
 //            bt_appIcon.setBackgroundImage(UIImage(named: (app_model?.app_iconName)!), forState: .Normal)
             bt_appIcon.setBackgroundImage(UIImage(named: "bilibili60x60"), forState: .Normal)
         }
@@ -61,9 +61,8 @@ class RYAppCellInside: UICollectionViewCell {
         
     }
     @objc private func clickAppIcon () {
-//        let navi = UINavigationController(rootViewController: RYAppEditVC())
-        let apps : [RYApp] = appsList as! [RYApp]
-        delegate?.addApp(apps)
+        let apps : [RYApp]? = appsList!
+        delegate?.addApp(apps!)
     }
     
     
