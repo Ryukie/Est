@@ -67,20 +67,20 @@ class RYAppCellInside: UICollectionViewCell {
 
         bt_appIcon.layer.cornerRadius = 8
         bt_appIcon.layer.masksToBounds = true
-        bt_appIcon.addTarget(self, action: "clickAppIcon", forControlEvents: .TouchUpInside)
+        bt_appIcon.addTarget(self, action: #selector(RYAppCellInside.clickAppIcon), forControlEvents: .TouchUpInside)
         
         
         lb_appName.text = ""
         lb_appName.textAlignment = .Center
         
         bt_delete.setBackgroundImage(UIImage(named: "app_delete"), forState: .Normal)
-        bt_delete.addTarget(self, action: "clickDeleteBtn", forControlEvents: .TouchUpInside)
+        bt_delete.addTarget(self, action: #selector(RYAppCellInside.clickDeleteBtn), forControlEvents: .TouchUpInside)
     }
     @objc private func clickAppIcon () {
         delegate?.addApp(self)
     }
     @objc private func clickDeleteBtn () {
-        print(__FUNCTION__)
+        print(#function)
         delegate?.deleteApp(self)
     }
     
