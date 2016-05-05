@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setGloableNaviColor()
         //testasasdasd   
         //test2分支
-        //test3
+        //test311111
+        
         return true
     }
     private func setGloableNaviColor () {
