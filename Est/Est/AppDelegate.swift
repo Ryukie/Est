@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = mainTabVC
         window?.makeKeyAndVisible()
         setGloableNaviColor()
+        //test
         return true
     }
     private func setGloableNaviColor () {
